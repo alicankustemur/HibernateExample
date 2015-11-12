@@ -11,6 +11,7 @@ import org.hibernate.service.ServiceRegistryBuilder;
 
 import com.alicankustemur.hibernate.entity.Adress;
 import com.alicankustemur.hibernate.entity.User;
+import com.alicankustemur.hibernate.entity.Vehicle;
 
 public class App
 {
@@ -50,16 +51,29 @@ public class App
 		user2.setJoinDate(new Date());
 
 		Adress adress = new Adress();
-		adress.setStreet("5632");
-		adress.setCity("Mersin");
-		adress.setState("Türkiye");
-		adress.setPincode("33040");
+		adress.setStreet("Street 1");
+		adress.setCity("City 1");
+		adress.setState("State 1");
+		adress.setPincode("Pin Code 1");
 
-		user.setHomeAdress(adress);
+		Adress adress2 = new Adress();
+		adress2.setStreet("Street 2");
+		adress2.setCity("City 2");
+		adress2.setState("State 2");
+		adress2.setPincode("Pin Code 2");
+
+		user.getListOfAdress().add(adress);
+		user.getListOfAdress().add(adress2);
+
+		Vehicle vehicle = new Vehicle();
+		vehicle.setVehicleName("Car");
+
+		user.setVehicle(vehicle);
 
 		session.beginTransaction();
 		session.save(user);
 		session.save(user2);
+		session.save(vehicle);
 		session.getTransaction().commit();
 		session.close();
 
@@ -68,6 +82,8 @@ public class App
 		session = sessionFactory.openSession();
 		session.beginTransaction();
 		user = (User)session.get(User.class, 1);
-		System.out.println(user.getName());
+		session.close();
+		System.out.println(user.getListOfAdress().size());
+
 	}
 }

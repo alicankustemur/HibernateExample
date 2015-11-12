@@ -26,6 +26,7 @@
  
         <!-- Annotated entity classes -->
         <mapping class="com.alicankustemur.hibernate.entity.User"/>
+         <mapping class="com.alicankustemur.hibernate.entity.Vehicle"/>
         
     </session-factory>
 </hibernate-configuration>
