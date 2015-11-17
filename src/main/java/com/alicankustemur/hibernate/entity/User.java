@@ -17,6 +17,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
+<<<<<<< HEAD
+=======
+import javax.persistence.OneToOne;
+>>>>>>> 616cf3f2a9ccba9474a8863c40d6f6e7eefe1abf
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -25,8 +29,13 @@ import org.hibernate.annotations.CollectionId;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Type;
 
+<<<<<<< HEAD
 @Entity(name = "USER_TABLE")
 @Table(name = "USER_TABLE")
+=======
+@Entity(name = "APP_USER")
+@Table(name = "APP_USER")
+>>>>>>> 616cf3f2a9ccba9474a8863c40d6f6e7eefe1abf
 public class User implements Serializable
 {
 	@Id
@@ -63,21 +72,34 @@ public class User implements Serializable
 	@CollectionId(columns = {@Column(name = "ADRESS_ID")}, generator = "hilo-gen", type = @Type(type = "long") )
 	private Collection<Adress>	listOfAdress	= new ArrayList<Adress>();
 
+<<<<<<< HEAD
 	/*
 	@OneToOne
 	@JoinColumn(name = "VEHICLE_ID")
 	private Vehicle				vehicle;
 	
+=======
+	@OneToOne
+	private Vehicle				vehicle;
+
+>>>>>>> 616cf3f2a9ccba9474a8863c40d6f6e7eefe1abf
 	public Vehicle getVehicle()
 	{
 		return vehicle;
 	}
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> 616cf3f2a9ccba9474a8863c40d6f6e7eefe1abf
 	public void setVehicle(Vehicle vehicle)
 	{
 		this.vehicle = vehicle;
 	}
+<<<<<<< HEAD
 	*/
+=======
+>>>>>>> 616cf3f2a9ccba9474a8863c40d6f6e7eefe1abf
 
 	public Collection<Adress> getListOfAdress()
 	{

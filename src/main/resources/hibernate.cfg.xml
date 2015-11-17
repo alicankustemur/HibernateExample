@@ -26,6 +26,11 @@
  
         <!-- Annotated entity classes -->
         <mapping class="com.alicankustemur.hibernate.entity.User"/>
+<<<<<<< HEAD
         <mapping class="com.alicankustemur.hibernate.entity.Vehicle"/>
+=======
+         <mapping class="com.alicankustemur.hibernate.entity.Vehicle"/>
+        
+>>>>>>> 616cf3f2a9ccba9474a8863c40d6f6e7eefe1abf
     </session-factory>
 </hibernate-configuration>

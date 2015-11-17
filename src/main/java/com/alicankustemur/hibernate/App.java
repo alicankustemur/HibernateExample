@@ -15,6 +15,10 @@ import com.alicankustemur.hibernate.entity.Vehicle;
 
 public class App
 {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 616cf3f2a9ccba9474a8863c40d6f6e7eefe1abf
 	private static SessionFactory configureSessionFactory() throws HibernateException
 	{
 		SessionFactory sessionFactory;
@@ -67,6 +71,11 @@ public class App
 		Vehicle vehicle = new Vehicle();
 		vehicle.setVehicleName("Car");
 
+<<<<<<< HEAD
+=======
+		user.setVehicle(vehicle);
+
+>>>>>>> 616cf3f2a9ccba9474a8863c40d6f6e7eefe1abf
 		session.beginTransaction();
 		session.save(user);
 		session.save(user2);
